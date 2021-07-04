@@ -1,0 +1,16 @@
+{
+  "name": "countdowntimer",
+  "version": "1.0.0",
+  "description": "Countdown timer - JS Challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel -p 8888 src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "@anaquinpm",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.1"
+  }
+}
