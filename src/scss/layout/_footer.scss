@@ -1,0 +1,17 @@
+@use '../abstract/variables' as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon{
+    margin: 24px;
+    flex: 0 1 auto;
+    fill: $primary-color-gray
+  }
+  &__icon:hover {
+    fill: $primary-color-red;
+  }
+
+}
