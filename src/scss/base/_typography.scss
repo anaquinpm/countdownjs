@@ -1,3 +1,59 @@
-* {
+@use '../abstract/variables' as *;
+
+body {
   font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+
+  .header {
+    &__title {
+      color: $neutral-color-white;
+      @media (max-width: $mobile-width) {
+        font-size: 0.9rem;
+        letter-spacing: 0.3rem;
+      }
+      @media (max-width: $desktop-width) and (min-width: $mobile-width) {
+        font-size: xx-large;
+        letter-spacing: 0.7rem;
+      }
+    }
+  }
+
+  .main {
+    @media (max-width: $mobile-width) {
+      &__day,
+      &__hour,
+      &__min,
+      &__sec {
+        font-size: 2.2rem;
+      }
+      &__sub {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: $desktop-width) and (min-width: $mobile-width) {
+      &__day,
+      &__hour,
+      &__min,
+      &__sec {
+        font-size: 5rem;
+      }
+      &__sub {
+        font-size: 1rem;
+      }
+    }
+
+    &__day,
+    &__hour,
+    &__min,
+    &__sec {
+      color: $primary-color-red;
+      text-align: center;
+    }
+    &__sub {
+      color: $primary-color-gray;
+      text-align: center;
+    }
+
+  }
 }

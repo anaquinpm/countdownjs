@@ -1,0 +1,24 @@
+@use '../abstract/variables' as *;
+
+.main {
+  @media (max-width: $mobile-width){
+  }
+  
+  @media (max-width: $desktop-width){
+  
+  }
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  &__digit{
+    flex: 0 0 auto ;
+  }
+  &__day,
+  &__hour,
+  &__min,
+  &__sec{
+    margin: 0px 10px 20px 10px;
+
+  }
+}
