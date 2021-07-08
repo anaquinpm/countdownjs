@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const trunc = (x) => Math.trunc(diffDate / x);
   const sustMillis = (s) => { diffDate = diffDate % s };
   const positiveNumber = (x) => x > 0;
-  
+
   function timer(milliseconds) {
     let intTime = trunc(milliseconds);
     sustMillis(milliseconds);
     return intTime;
   }
-  
+
   function sustNextDigit(index) {
     let gratherIndex = remainingTime.findIndex(positiveNumber);
     if (gratherIndex != -1) {
@@ -25,25 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(idInterval);
     }
   }
-  
+
   function countDown() {
     (remainingTime[indexSeg] > 0) ? remainingTime[indexSeg] -= 1 : sustNextDigit(indexSeg);
-    timeDom.forEach((digit,i)=> (remainingTime[i] > 10)? digit.innerHTML = remainingTime[i] : digit.innerHTML = '0'+remainingTime[i] );
+    timeDom.forEach((digit, i) =>
+      (remainingTime[i] > 9) ? digit.innerHTML = remainingTime[i] : digit.innerHTML = '0' + remainingTime[i]);
   }
-  
+
   // Cargado de la fecha mediante prompt
-  const promptFecha = prompt('Ingrese la fecha del evento: AAAA-MM-DD', 'AAAA-MM-DD').split('-');
-  const promptHora = prompt('Ingrese el horarios del evento: HH-MM', 'HH-MM').split('-');
-  let datePrompt = [...promptFecha, ... promptHora];
-  // !Date.UTC para poder cargar con numeros el día del evento -> mes del 0-11
-  datePrompt[1]--;
-  const eventDay = new Date(...datePrompt);
+  // const promptFecha = prompt('Ingrese la fecha del evento: AAAA-MM-DD', 'AAAA-MM-DD').split('-');
+  // const promptHora = prompt('Ingrese el horarios del evento: HH-MM', 'HH-MM').split('-');
+  // let datePrompt = [...promptFecha, ... promptHora];
+  // // !Date.UTC para poder cargar con numeros el día del evento -> mes del 0-11
+  // datePrompt[1]--;
+  // const eventDay = new Date(...datePrompt);
 
   // TODO: input and save in to storage the event day
-  
+
   // * Pruebas de tiempo
-  // const eventDay = new Date();
-  // eventDay.setTime(eventDay.getTime() + 8.64e7*14 + 1000*3)  // 14d:0h:0m:3s
+  const eventDay = new Date();
+  eventDay.setTime(eventDay.getTime() + 8.64e7 * 14 + 1000 * 3)  // 14d:0h:0m:3s
   // eventDay.setTime(eventDay.getTime() + 3.6e6*1 + 1000*3)    // 1h:0m:3s
   // eventDay.setTime(eventDay.getTime() + 1000 * 3)            // 3seg
 

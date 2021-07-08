@@ -4,7 +4,7 @@
   @media (max-width: $mobile-width){
   }
   
-  @media (max-width: $desktop-width){
+  @media (min-width: $mobile-width+1){
   
   }
   display: flex;
