@@ -11,38 +11,38 @@ body {
         font-size: 0.9rem;
         letter-spacing: 0.3rem;
       }
-      @media (max-width: $desktop-width) and (min-width: $mobile-width) {
-        font-size: xx-large;
-        letter-spacing: 0.7rem;
+      @media (min-width: $mobile-width+1) {
+        font-size: 3vmin;
+        letter-spacing: 1.5vmin;
       }
     }
   }
-
+  
   .main {
     @media (max-width: $mobile-width) {
       &__day,
       &__hour,
       &__min,
       &__sec {
-        font-size: 2.2rem;
+        font-size: 10vmin;
       }
       &__sub {
-        font-size: 0.7rem;
+        font-size: 1.5vmin;
       }
     }
-
-    @media (max-width: $desktop-width) and (min-width: $mobile-width) {
+    
+    @media  (min-width: $mobile-width+1) {
       &__day,
       &__hour,
       &__min,
       &__sec {
-        font-size: 5rem;
+        font-size: 10vmin; 
       }
       &__sub {
-        font-size: 1rem;
+        font-size: 1.5vh;
       }
     }
-
+    
     &__day,
     &__hour,
     &__min,
@@ -54,6 +54,17 @@ body {
       color: $primary-color-gray;
       text-align: center;
     }
-
+    
+  }
+  .footer{
+    color: $neutral-color-mostly-blue;
+    &__attribution{
+      text-align: center;
+      font-size: 1.2vh;    
+    }
+    &__link{
+      color: $primary-color-gray;
+      text-decoration: none;
+    }
   }
 }

@@ -1,9 +1,10 @@
 @use '../abstract/variables' as *;
 
 body {
+  background-image: url(#{$assetsPath}/bg-1920x1080.svg);
   background-color: hsl(249, 18%, 14%);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: cover;
   height: 100vh;
   display: grid;

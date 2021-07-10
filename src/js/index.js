@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
       (remainingTime[i] > 9) ? digit.innerHTML = remainingTime[i] : digit.innerHTML = '0' + remainingTime[i]);
   }
 
+  // TODO: crear modal para cargar los datos o researt el existente -> Borarr pruebas de tiempo
+  // TODO: input and save in to storage the event day
+
   // Cargado de la fecha mediante prompt
   // const promptFecha = prompt('Ingrese la fecha del evento: AAAA-MM-DD', 'AAAA-MM-DD').split('-');
   // const promptHora = prompt('Ingrese el horarios del evento: HH-MM', 'HH-MM').split('-');
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // datePrompt[1]--;
   // const eventDay = new Date(...datePrompt);
 
-  // TODO: input and save in to storage the event day
+
 
   // * Pruebas de tiempo
   const eventDay = new Date();
