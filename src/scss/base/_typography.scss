@@ -17,20 +17,20 @@ body {
       }
     }
   }
-
+  
   .main {
     @media (max-width: $mobile-width) {
       &__day,
       &__hour,
       &__min,
       &__sec {
-        font-size: 2.2rem;
+        font-size: 10vmin;
       }
       &__sub {
-        font-size: 0.7rem;
+        font-size: 1.5vmin;
       }
     }
-
+    
     @media  (min-width: $mobile-width+1) {
       &__day,
       &__hour,
@@ -42,7 +42,7 @@ body {
         font-size: 1.5vh;
       }
     }
-
+    
     &__day,
     &__hour,
     &__min,
@@ -54,6 +54,17 @@ body {
       color: $primary-color-gray;
       text-align: center;
     }
-
+    
+  }
+  .footer{
+    color: $neutral-color-mostly-blue;
+    &__attribution{
+      text-align: center;
+      font-size: 1.2vh;    
+    }
+    &__link{
+      color: $primary-color-gray;
+      text-decoration: none;
+    }
   }
 }
