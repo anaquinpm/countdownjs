@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gratherIndex = remainingTime.findIndex(positiveNumber);
     if (gratherIndex != -1) {
       for (index -= 1; remainingTime[index] === 0; index--) {
-        remainingTime[index] = 59;
+        (index===1) ? remainingTime[index] = 23 : remainingTime[index] = 59;
       }
       remainingTime[index] -= 1;
       remainingTime[indexSeg] = 59;
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     timeDom.forEach((digit, i) =>
       (remainingTime[i] > 9) ? digit.innerHTML = remainingTime[i] : digit.innerHTML = '0' + remainingTime[i]);
   }
-
-  // TODO: crear modal para cargar los datos o researt el existente -> Borarr pruebas de tiempo
-  // TODO: input and save in to storage the event day
+  //
+  // TODO: crear modal para cargar los datos o resetear el existente -> Borrar pruebas de tiempo
+  // TODO: input and save in to storage the event day -> LocalStorage
 
   // Cargado de la fecha mediante prompt
   // const promptFecha = prompt('Ingrese la fecha del evento: AAAA-MM-DD', 'AAAA-MM-DD').split('-');
