@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel -p 8888 src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html -d ./docs"
   },
   "author": "@anaquinpm",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.35.1"
+    "sass": "^1.35.2"
   }
 }
