@@ -1,0 +1,70 @@
+@use '../abstract/variables' as *;
+
+body {
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+
+  .header {
+    &__title {
+      color: $neutral-color-white;
+      @media (max-width: $mobile-width) {
+        font-size: 0.9rem;
+        letter-spacing: 0.3rem;
+      }
+      @media (min-width: $mobile-width+1) {
+        font-size: 3vmin;
+        letter-spacing: 1.5vmin;
+      }
+    }
+  }
+  
+  .main {
+    @media (max-width: $mobile-width) {
+      &__day,
+      &__hour,
+      &__min,
+      &__sec {
+        font-size: 10vmin;
+      }
+      &__sub {
+        font-size: 1.5vmin;
+      }
+    }
+    
+    @media  (min-width: $mobile-width+1) {
+      &__day,
+      &__hour,
+      &__min,
+      &__sec {
+        font-size: 10vmin; 
+      }
+      &__sub {
+        font-size: 1.5vh;
+      }
+    }
+    
+    &__day,
+    &__hour,
+    &__min,
+    &__sec {
+      color: $primary-color-red;
+      text-align: center;
+    }
+    &__sub {
+      color: $primary-color-gray;
+      text-align: center;
+    }
+    
+  }
+  .footer{
+    color: $neutral-color-mostly-blue;
+    &__attribution{
+      text-align: center;
+      font-size: 1.2vh;    
+    }
+    &__link{
+      color: $primary-color-gray;
+      text-decoration: none;
+    }
+  }
+}

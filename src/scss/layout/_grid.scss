@@ -1,0 +1,28 @@
+@use '../abstract/variables' as *;
+
+body {
+  background-image: url(#{$assetsPath}/bg-1920x1080.svg);
+  background-color: hsl(249, 18%, 14%);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: minmax(3%, 1fr) 2fr minmax(3%, 1fr);
+  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+}
+
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}

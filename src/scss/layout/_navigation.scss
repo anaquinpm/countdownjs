@@ -1,0 +1,49 @@
+@use '../abstract/variables' as *;
+
+.main {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  &__card{
+    position: relative;
+    margin: 0px 10px;
+    text-align: center;
+    width: 15vmin;
+    height: 14vmin;
+    display: block;
+    background-color: $neutral-color-blue;
+    border-radius: 1vmin;
+    box-shadow: 0 1.5vmin 0 -1px $neutral-color-mostly-blue;
+  }
+  &__line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: hsla(234, 17%, 12%, 0.25);
+    top: 50%;
+  }
+
+  &__dot {
+    position: absolute;
+    height: 5%;
+    width: 2.5%;
+    top: 50%;
+    background-color: $neutral-color-mostly-blue;
+    border: 1px solid $neutral-color-mostly-blue;
+    &--left {
+      margin-top: -2.5%;
+      border-top-right-radius: 200%;
+      border-bottom-right-radius: 200%;
+    }
+    &--right {
+      margin: -2.5% -2.5% 0 96%;
+      border-top-left-radius: 200%;
+      border-bottom-left-radius: 200%;
+    }
+  }
+
+  &__sub{
+    margin: 20px 0;
+  }
+}
