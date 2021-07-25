@@ -1,7 +1,8 @@
 @use '../abstract/variables' as *;
 
 body {
-  background-image: url(#{$assetsPath}/bg-1920x1080.svg);
+  background-image: url(./assets/images/bg-1920x1080.svg);
+  // background-image: url(#{$assetsPath}/bg-1920x1080.svg);
   background-color: hsl(249, 18%, 14%);
   background-repeat: no-repeat;
   background-position: right;
