@@ -38,11 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const minMill = 6e4;
   const secMill = 1000;
 
-  // * Set Coundown
+  // * Set Countdown
+  // Quoted in the README.md file
   const eventDay = new Date();
-  eventDay.setTime(eventDay.getTime() + dayMill * 14 + secMill * 3)  // 14d:0h:0m:3s
-  // eventDay.setTime(eventDay.getTime() + hourMill + secMill * 3)    // 1h:0m:3s
-  // eventDay.setTime(eventDay.getTime() + secMill * 3)            // 3seg
+  eventDay.setTime(eventDay.getTime() + dayMill * 14 + hourMill * 0 + minMill * 0 + secMill * 3)  // 14d:0h:0m:3s
 
   const now = new Date();
   let diffDate = eventDay - now;

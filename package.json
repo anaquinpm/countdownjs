@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel -p 8888 src/index.html",
-    "build": "parcel build src/index.html -d ./docs"
+    "build": "parcel build src/index.html -d ./"
   },
   "author": "@anaquinpm",
   "license": "ISC",

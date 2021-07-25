@@ -13,6 +13,8 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
       - [Desktop Screen](#desktop-screen)
     - [Links](#links)
     - [Built with](#built-with)
+  - [NPM Commands](#npm-commands)
+  - [Set Countdown](#set-countdown)
   - [Author](#author)
 
 ## Overview
@@ -47,6 +49,30 @@ Users should be able to:
   - Flexbox
 - JavaScript
 - Web Responsive Design
+
+## NPM Commands
+
+```bash
+# Dependency Installation
+$ npm install
+
+# Development environment
+$ npm run dev   // folder: src
+
+# Web for production
+$ npm run build   // folder: docs
+```
+
+
+## Set Countdown
+
+```javascript
+// ./src/index.js
+// change/delete the _AMOUNT_ parameters
+const eventDay = new Date();
+eventDay.setTime(eventDay.getTime() + dayMill * _AMOUNT_ + hourMill * _AMOUNT_ + minMill * _AMOUNT_+ secMill * _AMOUNT_ );
+
+```
 
 ## Author
 
