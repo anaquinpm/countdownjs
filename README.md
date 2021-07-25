@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL on GitHub: [anaquinpm.github.io/countdownjs](anaquinpm.github.io/countdownjs)
+- Live Site URL on netlify: [https://countdown-anaquinpm.netlify.app/](https://countdown-anaquinpm.netlify.app/)
 
 ### Built with
 
