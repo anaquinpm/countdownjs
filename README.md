@@ -60,7 +60,7 @@ $ npm install
 $ npm run dev   // folder: src
 
 # Web for production
-$ npm run build   // folder: docs
+$ npm run build   // folder: ./
 ```
 
 
